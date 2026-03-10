@@ -752,12 +752,15 @@
   }
   .tools-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
   }
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
+    .tools-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
     .tools-grid { grid-template-columns: 1fr; }
   }
   .tool-card {
@@ -785,6 +788,13 @@
     border-color: rgba(212,168,83,0.15);
   }
   .tool-pacto:hover { border-color: rgba(212,168,83,0.35); }
+  .tool-glossario {
+    background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(74,158,255,0.04));
+    border-color: rgba(139,92,246,0.15);
+  }
+  .tool-glossario:hover { border-color: rgba(139,92,246,0.35); }
+  .tool-glossario .tool-badge { color: var(--spirit-purple); }
+  .tool-glossario .tool-cta { color: var(--spirit-purple); }
   .tool-icon {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -1097,7 +1107,7 @@
     <div class="section-label" style="text-align:center;">// ferramentas gratuitas</div>
     <h2 class="section-title" style="text-align:center;">Comece Agora — Antes Mesmo de Ler o Livro</h2>
     <p style="text-align:center; color: var(--text-muted); max-width: 600px; margin: 0 auto 3rem; font-size: 1.05rem;">
-      Duas ferramentas práticas do livro, disponíveis gratuitamente para sua família.
+      Três ferramentas práticas do livro, disponíveis gratuitamente para sua família.
     </p>
     <div class="tools-grid">
       <a href="https://github.com/mousasnet/ocodigo" target="_blank" class="tool-card tool-diag">
@@ -1113,6 +1123,13 @@
         <h3 class="tool-title">Pacto Digital Familiar</h3>
         <p class="tool-desc">Modelo prático para imprimir e assinar com toda a família. Um compromisso de proteção e equilíbrio digital no lar.</p>
         <span class="tool-cta">Baixar o Pacto →</span>
+      </a>
+      <a href="glossario.html" target="_blank" class="tool-card tool-glossario">
+        <div class="tool-icon">📖</div>
+        <div class="tool-badge">Referência Rápida</div>
+        <h3 class="tool-title">Glossário Técnico</h3>
+        <p class="tool-desc">Todos os termos de tecnologia, neurociência e teologia usados no livro — explicados de forma clara e acessível para qualquer leitor.</p>
+        <span class="tool-cta">Consultar o Glossário →</span>
       </a>
     </div>
   </div>
