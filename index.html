@@ -1175,12 +1175,10 @@
   <p class="final-verse">Não vos conformeis com este século, mas transformai-vos pela renovação do vosso entendimento.</p>
   <p class="final-ref">— Romanos 12:2</p>
   <h2 class="final-hook">O campo de batalha é real.<br>Mas o Sopro é mais forte que o Código.</h2>
-  <p class="final-sub">Deixe seu email e seja o primeiro a saber quando o livro estiver disponível.</p>
+  <p class="final-sub">Garanta o seu exemplar agora mesmo.</p>
   <div class="email-form" id="emailForm">
-    <input type="email" class="email-input" id="emailInput" placeholder="Seu melhor email" required>
-    <button class="btn btn-primary" onclick="enviarWhatsApp()">Quero Ser Avisado</button>
+    <a href="https://wa.me/5511930019000?text=%F0%9F%93%96%20*O%20C%C3%B3digo%20e%20o%20Sopro*%20%E2%80%94%20Quero%20Comprar!%0A%0AOl%C3%A1!%20Quero%20comprar%20o%20livro.%20Como%20fa%C3%A7o%3F" target="_blank" class="btn btn-primary" style="text-decoration:none;text-align:center;">Quero Comprar</a>
   </div>
-  <p id="formMsg" style="color: var(--gold); font-size: 0.9rem; margin-top: 1rem; display: none; text-align: center;"></p>
 </section>
 
 <!-- INSTAGRAM -->
@@ -1224,38 +1222,6 @@
   }, { threshold: 0.15 });
   reveals.forEach(el => observer.observe(el));
 
-  // WhatsApp lead capture
-  function enviarWhatsApp() {
-    const email = document.getElementById('emailInput').value.trim();
-    const msg = document.getElementById('formMsg');
-    
-    if (!email || !email.includes('@') || !email.includes('.')) {
-      msg.style.display = 'block';
-      msg.style.color = '#E8652B';
-      msg.textContent = 'Por favor, informe um email válido.';
-      return;
-    }
-
-    const texto = encodeURIComponent(
-      `📖 *O Código e o Sopro* — Novo Interessado!\n\n` +
-      `Olá! Gostaria de ser avisado sobre o lançamento do livro.\n\n` +
-      `📧 Meu email: ${email}\n\n` +
-      `Vim pela landing page do livro.`
-    );
-
-    msg.style.display = 'block';
-    msg.style.color = '#D4A853';
-    msg.textContent = '✅ Obrigado! Redirecionando para o WhatsApp...';
-
-    setTimeout(() => {
-      window.open(`https://wa.me/5511930019000?text=${texto}`, '_blank');
-    }, 800);
-  }
-
-  // Allow Enter key to submit
-  document.getElementById('emailInput').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') { e.preventDefault(); enviarWhatsApp(); }
-  });
   // Nav scroll
   window.addEventListener('scroll', () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
